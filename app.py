@@ -43,7 +43,14 @@ def recommended():
     all_recommended = list(
         all_recommended for all_recommended, _ in itertools.groupby(all_recommended)
     )
-    return jsonify({"data": all_recommended, "status": "success"})
+    article_data = []
+    for article in all_recommended:
+        articles_data = {
+            "title": article[0],
+            "content": article[1],
+        }
+        article_data.append(articles_data)
+    return jsonify({"data": article_data, "status": "success"})
 
 
 if __name__ == "__main__":

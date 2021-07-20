@@ -18,7 +18,7 @@ def get_recommendations(title):
     sim_scores = sim_scores[1:11]
     article_indices = [i[0] for i in sim_scores]
     # return df["title"].iloc[article_indices].values.tolist()
-    return df.iloc[article_indices].values.tolist()
+    return df[["title", "text"]].iloc[article_indices].values.tolist()
 
 
 # print(get_recommendations("pull request first - practical blend",cosine_sim))
