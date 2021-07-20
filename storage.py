@@ -1,7 +1,7 @@
 import csv
 
 all_articles = []
-with open("articles.csv") as f:
+with open("english_articles.csv") as f:
     csvreader = csv.reader(f)
     data = list(csvreader)
     all_articles = data[1:]

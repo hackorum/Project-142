@@ -34,7 +34,7 @@ def popular():
 def recommended():
     all_recommended = []
     for liked_article in liked_articles:
-        output = get_recommendations(liked_article[11])
+        output = get_recommendations(liked_article[12])
         for data in output:
             all_recommended.append(output)
     import itertools

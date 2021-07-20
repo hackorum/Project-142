@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-df = pd.read_csv("articles.csv")
+df = pd.read_csv("english_articles.csv")
 df = df[df["title"].notna()]
 count = CountVectorizer(stop_words="english")
 count_matrix = count.fit_transform(df["title"])
